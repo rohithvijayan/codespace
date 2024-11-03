@@ -1,0 +1,58 @@
+*{margin: 0;padding: 0;box-sizing: border-box;scrollbar-width: none;}
+hr{border-color: #0f0f0f;}
+.container{display:flex;flex-direction: column;background-color:#1b1b1b;
+margin: 0;padding: 0;height: max-content;box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+nav{border-color: rgb(255, 7, 48);width: 100%;height: max-content;text-align: center;padding: 20px;display: flex;flex-direction: row;justify-content:space-between;text-align:center;gap:10vh;align-items: center;}
+
+#logo{width: 100px;}
+/* run button */
+#run-btn {
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: #212121;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms;
+    overflow: hidden;
+} 
+#run-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #881717;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms
+   }
+   
+#run-btn:hover {
+    color: #e8e8e8;
+   }
+   
+#run-btn:hover::before {
+    width: 100%;
+   
+}
+/* =================================================================*/
+nav h1{color: #d0d0d0;font-size: 5vh;font-weight: bolder;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
+section{display: flex;flex-direction: row;}
+.code-editor{width: 50%;height: 90vh;display: flex;flex-direction: column;justify-content: flex-start;gap:10px;padding-left: 10px;padding-right: 10px;padding-top: 10px;padding-bottom: 10px;margin-left: 2vh;margin-top: 2vh;align-items: center;}
+.html{background-color: black;width:90%;height: 30vh;border-radius: 20px;box-shadow:2px 2px 2px 1px rgb(155, 155, 151);}
+.css{background-color: rgb(150, 140, 140);width:90%;height: 30vh;border-radius: 20px;
+    box-shadow:2px 2px 2px 1px rgb(155, 155, 151);}
+.js{background-color: rgb(70, 184, 4);width:90%;height: 30vh;border-radius: 20px;
+    box-shadow:2px 2px 2px 1px rgb(155, 155, 151);}
+.input{width: 100%;height: 100%;resize: none;cursor:auto;border-radius: 20px;padding:10px 10px;text-wrap: pretty;scroll-behavior: smooth;scrollbar-width: auto;}
+.output{background-color: rgb(144, 144, 156);width: 50%;height: 90vh;padding-left: 10px;padding-right: 10px;padding-top: 10px;padding-bottom: 10px;margin-left: 2vh;margin-bottom: 2vh;margin-top: 2vh;margin-right: 2vh;border-radius: 20px;}
