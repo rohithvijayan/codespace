@@ -3,38 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Code Editor</title>
     <link rel="stylesheet" href="style.css">
-    <title>CodeSpace</title>
 </head>
 <body>
-    <div class="container">
-        <nav>
-          <div class="logo">
-            <img src="logo.png" alt="logo" id="logo">
-          </div>
-          <h1> CodeSpace </h1>
-          <div class="buttons">
-            <button id="run-btn">Run</button>
-          </div>
-        </nav>
-        <hr><br>
-        <section>
-            <div class="code-editor">
-                <div class="html">
-                    <textarea name="" class="input" placeholder="HTML"></textarea>
-                </div>
-                <div class="css">
-                    <textarea name="" placeholder="CSS" class="input"></textarea>
-                </div>
-                <div class="js">
-                    <textarea name="" class="input" placeholder="JS"></textarea>
-                </div>
-            </div>
-            <div class="output"></div>
-        </section>
-        
+
+    <!-- Toolbar for actions -->
+    <div class="toolbar">
+        <div class="branding">
+            <h1>CodeSpace</h1>
+        </div>
+        <div class="buttons">
+            <button class="toolbar-btn">Save</button>
+            <button class="toolbar-btn" id="run-btn">Run</button>
+            <button class="toolbar-btn">Reset</button>
+        </div>
     </div>
 
+    <!-- Main container for editor and output -->
+    <div class="container">
+        <!-- Left panel for code inputs -->
+        <div class="editor-pane">
+            <div class="code-panel" id="html-panel">
+                <div class="panel-header">HTML</div>
+                <textarea class="code-input" id="html-input" placeholder="Write HTML here..."></textarea>
+            </div>
+            <div class="code-panel" id="css-panel">
+                <div class="panel-header">CSS</div>
+                <textarea class="code-input" placeholder="Write CSS here..." id="css-input"></textarea>
+            </div>
+            <div class="code-panel" id="js-panel">
+                <div class="panel-header">JavaScript</div>
+                <textarea class="code-input" placeholder="Write JavaScript here..." id="js-input"></textarea>
+            </div>
+        </div>
+
+        <!-- Right panel for live output -->
+        <div class="output-pane">
+            <iframe id="live-output" title="Live Output"></iframe>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
