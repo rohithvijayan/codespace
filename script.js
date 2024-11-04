@@ -1,4 +1,4 @@
-const htmlinput=document.getElementById('html-input');
+let htmlinput=document.getElementById('html-input');
 const cssinput=document.getElementById('css-input');
 const jsinput=document.getElementById('js-input');
 const runBtn=document.getElementById("run-btn");
@@ -7,12 +7,24 @@ const iframe=document.getElementById('live-output').contentWindow.document;
 const resetBtn=document.getElementById('reset-btn');
 runBtn.addEventListener("click",function(){
     const html=htmlinput.value;
-    console.log(html);
+    //console.log(html);
     let css=cssinput.value;
     let js=jsinput.value;
     iframe.open();
-    iframe.write(html);
-    
+    iframe.open();
+    iframe.write(`
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <style>${css}</style>
+        </head>
+        <body>
+            ${html}
+            <script>${js}<\/script>
+        </body>
+        </html>
+    `);
+    iframe.close();
 })
 resetBtn.addEventListener("click",function(){
     console.log("reset initiated")
