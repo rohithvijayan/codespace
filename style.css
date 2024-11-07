@@ -1,112 +1,112 @@
-    /* styles.css */
+/* styles.css */
 
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #121212; /* Dark theme background */
-        color: #ffffff;
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
-    }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Dark theme background */
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
 
-    .toolbar {
-        display: flex;
-        justify-content: space-between;
-        text-align: center;
-        padding: 30px;
-        background-color: #1e1e1e;
-        border-bottom: 1px solid #333;
-    }
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 30px;
+    background-color: #1e1e1e;
+    border-bottom: 1px solid #333;
+}
 
-    .toolbar-btn {
-        margin: 0 10px;
-        padding: 8px 16px;
-        background-color: #6200ea;
-        border: none;
-        border-radius: 8px;
-        color: #ffffff;
-        font-size: 16px;
-        cursor: pointer;
-        transition: background 0.2s;
-    }
+.toolbar-btn {
+    margin: 0 10px;
+    padding: 8px 16px;
+    background-color: #6200ea;
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
 
-    .toolbar-btn:hover {
-        background-color: #3700b3;
-    }
+.toolbar-btn:hover {
+    background-color: #3700b3;
+}
 
-    .container {
-        display: flex;
-        flex: 1;
-        overflow: hidden;
-        padding: 20px;
-    }
+.container {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    padding: 20px;
+}
 
-    .editor-pane {
-        display: flex;
-        flex-direction: column;
-        width: 50%;
-        background-color: #1e1e1e;
-        border-right: 1px solid #333;
-        padding: 10px;
-        overflow-y: auto;
-    }
+.editor-pane {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: #1e1e1e;
+    border-right: 1px solid #333;
+    padding: 10px;
+    overflow-y: auto;
+}
 
-    .code-panel {
-        margin-bottom: 10px;
-        background-color: #2c2c2c;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-    }
+.code-panel {
+    margin-bottom: 10px;
+    background-color: #2c2c2c;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
 
-    .panel-header {
-        font-weight: bold;
-        margin-bottom: 5px;
-        color: #bb86fc;
-    }
+.panel-header {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #bb86fc;
+}
 
-    .code-input {
-        background-color: #121212;
-        color: #e5e5e5;
-        border: none;
-        border-radius: 5px;
-        padding: 10px;
-        font-size: 14px;
-        font-family: 'Courier New', monospace;
-        height: 150px;
-        resize: none;
-        line-height: 1.5;
-        overflow-y: auto;
-        color: #ffffff;
-    }
+.code-input {
+    background-color: #121212;
+    color: #e5e5e5;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    font-family: 'Courier New', monospace;
+    height: 150px;
+    resize: none;
+    line-height: 1.5;
+    overflow-y: auto;
+    color: #ffffff;
+}
 
-    /* Optional: Add syntax highlighting and line numbering */
-    .code-input::placeholder {
-        color: #888888;
-    }
+/* Optional: Add syntax highlighting and line numbering */
+.code-input::placeholder {
+    color: #888888;
+}
 
-    .output-pane {
-        flex: 1;
-        background-color: #2c2c2c;
-        border-left: 1px solid #333;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+.output-pane {
+    flex: 1;
+    background-color: #2c2c2c;
+    border-left: 1px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    #live-output {
-        width: 95%;
-        height: 90%;
-        border: none;
-        background-color: #ffffff;
-        border-radius: 8px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    }
+#live-output {
+    width: 95%;
+    height: 90%;
+    border: none;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
