@@ -5,6 +5,8 @@ const runBtn=document.getElementById("run-btn");
 const output=document.querySelector('.output-pane');
 const iframe=document.getElementById('live-output').contentWindow.document;
 const resetBtn=document.getElementById('reset-btn');
+const newproject=document.getElementById('newBtn');
+
 runBtn.addEventListener("click",function(){
     const html=htmlinput.value;
     //console.log(html);

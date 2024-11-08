@@ -110,3 +110,8 @@ body {
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
+#title{font-size:4vh;}
+#second-color{background: rgb(174,135,255);
+    background: linear-gradient(90deg, rgba(174,135,255,1) 47%, rgba(255,71,202,1) 76%);color:transparent; -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;}
+.branding a{color:ghostwhite;text-decoration: none;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-style: italic;}
