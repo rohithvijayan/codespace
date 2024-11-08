@@ -3,45 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodeSpace-Build It Live</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="homestyle.css">
 </head>
 <body>
-
-    <!-- Toolbar for actions -->
-    <div class="toolbar">
-        <div class="branding">
-           <a href="home.html" > <h1 id="title">Code<span id="second-color">Space</span></h1></a>
-        </div>
-        <div class="buttons">
-            <button class="toolbar-btn">Save</button>
-            <button class="toolbar-btn" id="run-btn">Run</button>
-            <button class="toolbar-btn" id="reset-btn">Reset</button>
-        </div>
-    </div>
-
-    <!-- Main container for editor and output -->
     <div class="container">
-        <!-- Left panel for code inputs -->
-        <div class="editor-pane">
-            <div class="code-panel" id="html-panel">
-                <div class="panel-header">HTML</div>
-                <textarea class="code-input" id="html-input" placeholder="Write HTML here..."></textarea>
+        <nav>
+            <div class="nav-bar">
+                <div class="logo">
+                    <h2 id="logo-title">Code<span id="second-color">Space</span></h2>
+                </div>
+                <div class="nav-links"></div>
+                <div class="account">
+                    <button class="btn" id="login">LogIn</button>
+                    <button class="btn" id="signup">SignUp</button>
+                </div>
             </div>
-            <div class="code-panel" id="css-panel">
-                <div class="panel-header">CSS</div>
-                <textarea class="code-input" placeholder="Write CSS here..." id="css-input"></textarea>
+        </nav><br><br>
+        <section class="hero">
+            <div class="section-title">
+                <h1>Welcome To <span id="second-color">CodeSpace</span></h1><br>
+                <p>Write. Run. Refine — Code Lives Here.</p><br>
+                <button class="cssbuttons-io" id="newBtn" href="index.html"><a href="index.html">
+                  <span
+                    ><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                      <path
+                        d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
+                        fill="currentColor"
+                      ></path>
+                    </svg>
+                    Create New Project</span
+                  ></a>
+                </button>
+                
             </div>
-            <div class="code-panel" id="js-panel">
-                <div class="panel-header">JavaScript</div>
-                <textarea class="code-input" placeholder="Write JavaScript here..." id="js-input"></textarea>
+            <div class="hero-img">
+                <img src="code-editor.png" alt="" id="main-img">
             </div>
-        </div>
-
-        <!-- Right panel for live output -->
-        <div class="output-pane">
-            <iframe id="live-output" title="Live Output"></iframe>
-        </div>
+        </section>
     </div>
     <script src="script.js"></script>
 </body>
