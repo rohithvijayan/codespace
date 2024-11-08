@@ -132,6 +132,10 @@ font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-styl
   .account{padding-right: 10px;text-align: center;padding-top: 1.5vh;margin-left: 0;margin-right: 0;}
   .btn{width: 100px;height: 40px;padding:none;margin-top: 3vh;}
   #login{width: 100px;height: 40px;}
-  #hero-para{width: fit-content;font-size: medium;text-overflow: clip;letter-spacing: 0px;}
+  #hero-para{width: 280px;font-size: medium;text-overflow: clip;letter-spacing: 0px;}
   .hero-img{padding-top: 3vh;}
+  @keyframes typing-para {
+    from { width: 100px; }
+    to { width:280px; } /* Adjust based on your content */
+  }
 }
