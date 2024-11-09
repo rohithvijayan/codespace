@@ -10,14 +10,15 @@
 
 ### 1. Home Page
 
-![Home Page]![Screenshot from 2024-11-09 17-39-11](https://github.com/user-attachments/assets/3e05f0c4-2112-47b3-a8a4-51fcf769b393)
-()
+![Screenshot from 2024-11-09 17-39-11](https://github.com/user-attachments/assets/3e05f0c4-2112-47b3-a8a4-51fcf769b393)
 
 ### 2. Live View Page
 
-![Live View Page](![Screenshot from 2024-11-09 17-39-22](https://github.com/user-attachments/assets/2571b539-c2c2-4039-9fdb-fc62bb9c067e)
-)
-![Live Render Example]!![Screenshot from 2024-11-09 17-43-09](https://github.com/user-attachments/assets/f7a69a4d-fbf1-460c-ba6b-3140aaa4cbee)
+![Screenshot from 2024-11-09 17-39-22](https://github.com/user-attachments/assets/2571b539-c2c2-4039-9fdb-fc62bb9c067e)
+
+### 2. Live Render 
+![Screenshot from 2024-11-09 17-39-22](https://github.com/user-attachments/assets/9baa9f61-5aff-4bbf-bb67-9942887df984)
+
 
 
 
