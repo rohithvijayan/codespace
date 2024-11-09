@@ -1,0 +1,41 @@
+{% extends "index.html" %}
+{% load static %}
+{% block title %}
+  <title>SignUp</title>
+{% endblock title %}
+{% block cssLink %}
+  <link rel="stylesheet" href={% static 'css/signup.css' %}>
+{% endblock cssLink %}<link rel="stylesheet" href={% static 'css/signup.css' %}>
+{% block hero %}
+<section class="hero">
+    <div class="section-title">
+        <h1 id="hero-title" >Join <span id="second-color">CodeSpace</span></h1><br>
+        <p id="hero-para">Write. Run. Refine — Code Lives Here.</p><br> 
+    </div>
+    /* From Uiverse.io by Yaya12085 */ 
+    <form class="form">
+        <p class="title">Register </p>
+        <p class="message">Signup now and get full access to our app. </p>
+    
+            <label>
+                <input required="" placeholder="" type="text" class="input">
+                <span>UserName</span>
+            </label>
+        <label>
+            <input required="" placeholder="" type="email" class="input">
+            <span>Email</span>
+        </label> 
+            
+        <label>
+            <input required="" placeholder="" type="password" class="input">
+            <span>Password</span>
+        </label>
+        <label>
+            <input required="" placeholder="" type="password" class="input">
+            <span>Confirm password</span>
+        </label>
+        <button class="submit">Register</button>
+        <p class="signin">Already have an acount ? <a href={% url "login" %}>Signin</a> </p>
+    </form>
+</section>
+{% endblock hero %}

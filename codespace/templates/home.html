@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeSpace-Build It Live</title>
+    <link rel="stylesheet" href=" {% static 'css/style.css' %} ">
+</head>
+<body>
+
+    <!-- Toolbar for actions -->
+    <div class="toolbar">
+        <div class="branding">
+           <a href={% url "index" %} > <h1 id="title">Code<span id="second-color">Space</span></h1></a>
+        </div>
+        <div class="buttons">
+            <button class="toolbar-btn" id="save-btn">Save</button>
+            <button class="toolbar-btn" id="run-btn">Run</button>
+            <button class="toolbar-btn" id="reset-btn">Reset</button>
+        </div>
+    </div>
+
+    <!-- Main container for editor and output -->
+    <div class="container">
+        <!-- Left panel for code inputs -->
+        <div class="editor-pane">
+            <div class="code-panel" id="html-panel">
+                <div class="panel-header">
+                      <h3> HTML</h3>
+                    
+                </div>
+                <textarea class="code-input" id="html-input" placeholder="Write HTML here..."></textarea>
+            </div>
+            <div class="code-panel" id="css-panel">
+                <div class="panel-header">
+                      <h3> CS</h3>
+                </div>
+                <textarea class="code-input" placeholder="Write CSS here..." id="css-input"></textarea>
+            </div>
+            <div class="code-panel" id="js-panel">
+                <div class="panel-header">
+                      <h3> JS</h3>
+                </div>
+                <textarea class="code-input" placeholder="Write JavaScript here..." id="js-input"></textarea>
+            </div>
+        </div>
+        <br>
+        <!-- Right panel for live output -->
+        <div class="output-pane">
+            <iframe id="live-output" title="Live Output"></iframe>
+        </div>
+    </div>
+    <script src=" {% static 'js/script.js' %} "></script>
+</body>
+</html>

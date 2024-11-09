@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% block title %}<title>CodeSpace-Build It Live</title>{% endblock title %}
+{% block cssLink %}<link rel="stylesheet" href="{% static 'css/indexStyle.css' %}">{% endblock cssLink %}
+</head>
+<body>
+<div class="container">
+    <nav>
+        <div class="nav-bar">
+            <div class="logo">
+                <a href={% url "index" %}><h2 id="logo-title"  >Code<span id="second-color">Space</span></h2></a>
+            </div>
+            <div class="nav-links"></div>
+            <div class="account">
+                <a href={% url "login" %}><button class="btn" id="login">LogIn</button></a>
+                <a href={% url "register" %}><button class="btn" id="signup">SignUp</button></a>
+            </div>
+        </div>
+    </nav><br><br>
+    {% block hero %}
+    <section class="hero">
+        <div class="section-title">
+            <h1 id="hero-title" >Welcome To <span id="second-color">CodeSpace</span></h1><br>
+            <p id="hero-para">Write. Run. Refine — Code Lives Here.</p><br>
+            <button class="cssbuttons-io" id="newBtn" ><a href={% url "home" %}>
+                <span
+                ><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0h24v24H0z" fill="none"></path>
+                    <path
+                    d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
+                    fill="currentColor">
+                    </path>
+                </svg>
+                Create New Project</span>
+                </a>
+            </button>  
+        </div>
+        <div class="hero-img">
+            <img src=" {% static 'images/code-editor.png' %} " alt="" id="main-img" unselectable="on">
+        </div>
+    </section>
+    {% endblock hero %}
+</div>
+
+<script src=" {% static 'js/script.js' %} "></script>
+</body>
+</html>
