@@ -1,0 +1,22 @@
+Generate the complete HTML, CSS, and JavaScript code for a webpage based on the following requirements:
+
+**User Description**: {Insert user’s prompt describing the design, layout, components, and functionalities they want}
+
+**Output Specifications**:
+1. **Structure**: Separate HTML, CSS, and JavaScript sections within the response.
+2. **HTML**: Provide the complete HTML structure in a section labeled "HTML". This should include the `<head>`, `<body>`, and any necessary `<div>` or `<section>` elements.
+3. **CSS**: In a section labeled "CSS", include only the CSS required to match the described design, including layout, colors, typography, and responsive behavior.
+4. **JavaScript**: In a section labeled "JavaScript", provide only the JavaScript code necessary for the described interactive components or functionalities (e.g., animations, form validation, button clicks).
+5. **Extraction**: Format the code blocks so each part (HTML, CSS, JavaScript) can be easily identified and copied separately.
+
+Output each section in the following format for easy extraction:
+
+**Example Output Format:**
+- **HTML**:
+(HTML CODE HERE)
+
+- **CSS**:
+(CSS STYLING HERE)
+
+- **JavaScript**:
+Ensure the code is clean, concise, and matches the described design and functionality requirements.
