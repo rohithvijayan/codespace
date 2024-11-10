@@ -9,10 +9,14 @@ body{background-color: #0C0C12;scroll-behavior: smooth;overflow:hidden;box-sizin
 #logo-title{font-size: xx-large;font-weight: 1000;color: rgb(255, 255, 255);
 font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-style: italic;}
 /* LOGIN-SIGNUP*/
-.account{width: 30%;height: 12vh;display:flex;flex-direction: row;gap: 3vh;justify-content: flex-end}
+.account {width: 30%;height: 12vh;display:flex;flex-direction: row;gap: 3vh;justify-content: flex-end;}
+h3#user-name{color: rgb(252, 252, 255);font-size: larger;align-content: center;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;text-transform: uppercase;}
+h3#user-name:hover{color: rgb(189, 22, 141);}
 #login{background-color: rgb(255, 254, 253);color:#BC13FE;font-size: large;font-weight: 1200;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
 #login:hover{background-color:slategray;color: blanchedalmond;}
 #signup:hover{background-color: white;color: #BC13FE;}
+#logout{width: 100px;height: 50px;}
+#logout:hover{background-color: gainsboro;color: #000;}
 /* HERO SECTIOn*/
 .hero{height: 60vh;text-align: center;display: flex;flex-direction: column;flex-wrap: nowrap;padding-top: 3vh;justify-content: flex-start;align-items: center;}
 .hero h1{font-size: 10vh;font-weight:bolder;color: floralwhite;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-style: italic;}

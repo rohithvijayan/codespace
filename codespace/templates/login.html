@@ -12,19 +12,20 @@
         <h1 id="hero-title" >Enter <span id="second-color">CodeSpace</span></h1><br>
     </div>
 
-    <form class="form">
+    <form class="form" method="POST" action={% url "login" %}>
+        {% csrf_token %}
         <p class="title">LogIn </p>
         <p class="message">Login now and get full access to our app. </p>
     
             <label>
-                <input required="" placeholder="" type="text" class="input">
+                <input required="" placeholder="" type="text" class="input" name="username">
                 <span>UserName</span>
             </label>
         <label>
-            <input required="" placeholder="" type="password" class="input">
+            <input required="" placeholder="" type="password" class="input" name="password">
             <span>Password</span>
         </label>
-        <button class="submit">Register</button>
+        <input class="submit" type="submit" value="Login"></input>
         <p class="signin">New to CodeSpace? <a href={% url "register" %}>SignUp</a> </p>
     </form>
 </section>

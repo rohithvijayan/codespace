@@ -23,22 +23,24 @@ body {
     background-color: #1e1e1e;
     border-bottom: 1px solid #333;
 }
+.buttons{display: flex;flex-direction: row;justify-content: space-evenly;}
 
 .toolbar-btn {
-    margin: 0 10px;
-    padding: 8px 16px;
-    background-color: #6200ea;
-    border: none;
-    border-radius: 8px;
-    color: #ffffff;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.2s;
+  margin: 0 10px;
+  padding: 15px 16px;
+  background-color: #6200ea;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
 }
 
 .toolbar-btn:hover {
-    background-color: #3700b3;
-}
+    background-color: ghostwhite;
+    color: #1e1e1e;
+  }
 
 .container {
     display: flex;
@@ -116,7 +118,118 @@ body {
     background: linear-gradient(90deg, rgba(174,135,255,1) 47%, rgba(255,71,202,1) 76%);color:transparent; -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;}
 .branding a{color:ghostwhite;text-decoration: none;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-style: italic;}
+/*-------------------DYNAMIC PART------------------------------------------------- */
+.hero{height: 60vh;text-align: center;display: flex;flex-direction: column;flex-wrap: nowrap;padding-top: 3vh;justify-content: flex-start;align-items: center;}
+.hero h1{font-size: 5vh;font-weight:bolder;color: floralwhite;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-style: italic;}
+#second-color{background: rgb(174,135,255);
+    background: linear-gradient(90deg, rgba(174,135,255,1) 47%, rgba(255,71,202,1) 76%);color:transparent; -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;}
+.hero p{font-size: large;color: rgb(173, 168, 160);font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-weight:200;text-wrap: pretty;font-style: italic;padding-top: 0vh;}
+.btn{background-color:#BC13FE;color: #ffffff;font-size: larger;font-weight: bolder;width: 200px;height: 50px;border-radius: 30px;border: none;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;padding: 10px 10px;margin-top: 3vh;}
+/* From Uiverse.io by adamgiebl */ 
+.cssbuttons-io {
+    position: relative;
+    font-family: inherit;
+    font-weight: 900;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    border-radius: 0.8em;
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(to right, #8e2de2, #4a00e0);
+    color: ghostwhite;
+    overflow: hidden;
+  }
+  a{color: ghostwhite;}
+  .cssbuttons-io svg {
+    width: 1.2em;
+    height: 1.2em;
+    margin-right: 0.5em;
+  }
+  
+  .cssbuttons-io span {
+    position: relative;
+    z-index: 10;
+    transition: color 0.4s;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.8em 1.2em 0.8em 1.05em;
+  }
+  
+  .cssbuttons-io::before,
+  .cssbuttons-io::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  
+  .cssbuttons-io::before {
+    content: "";
+    background: #000;
+    width: 120%;
+    left: -10%;
+    transform: skew(30deg);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+  }
+  
+  .cssbuttons-io:hover::before {
+    transform: translate3d(100%, 0, 0);
+  }
+  
+  .cssbuttons-io:active {
+    transform: scale(0.95);
+  }
+/*----------------------------------------------------------------*/
 
+/*----------------------------------------------------------------*/
+
+#main-img{width: 60vh;height: 60vh;transition: box-shadow 0.3s ease;display: block;}
+
+#hero-title{  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;}
+#hero-para {
+  overflow: hidden;
+  border-right: .15em solid orange; /* The typewriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  width:420px; /* Adjusts width to fit content */
+  animation: 
+    typing-para 4.0s steps(40, end),
+    blink-caret-para .75s step-end infinite;
+}
+/* The typing effect-title */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  100% { border-color: rgb(249, 238, 252); }
+}
+/*------------------------------------------*/
+/* The typing effect-para */
+
+@keyframes typing-para {
+  from { width: 100px; }
+  to { width:430px; } /* Adjust based on your content */
+}
+
+@keyframes blink-caret-para {
+  from, to { border-color: transparent; }
+  50% { border-color: rgb(249, 238, 252); }
+}/*----------------------------------------------------------------*/
 @media screen and (max-width:600px){
     #save-btn{display: none;}
     .toolbar{height: 13vh;}

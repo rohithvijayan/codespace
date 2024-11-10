@@ -12,12 +12,20 @@
     <nav>
         <div class="nav-bar">
             <div class="logo">
-                <a href={% url "index" %}><h2 id="logo-title"  >Code<span id="second-color">Space</span></h2></a>
+                <a href={% url "index" %}><h2 id="logo-title">Code<span id="second-color">Space</span></h2></a>
             </div>
             <div class="nav-links"></div>
             <div class="account">
-                <a href={% url "login" %}><button class="btn" id="login">LogIn</button></a>
+                {% if user.is_authenticated %}
+                    <h3 id="user-name">Welcome {{user.get_username}}</h3>
+                    <form method="POST" action={% url "logout" %}>
+                        {% csrf_token %}
+                        <input type="submit" class="btn" id="logout" value="Logout"></input>
+                    </form>
+                {% else %}
+                <a href={% url "login" %}><button class="btn" id="signup">Login</button></a>
                 <a href={% url "register" %}><button class="btn" id="signup">SignUp</button></a>
+                {% endif %}
             </div>
         </div>
     </nav><br><br>

@@ -8,19 +8,21 @@
     <link rel="stylesheet" href=" {% static 'css/style.css' %} ">
 </head>
 <body>
-
+{% if user.is_authenticated %}
     <!-- Toolbar for actions -->
     <div class="toolbar">
         <div class="branding">
            <a href={% url "index" %} > <h1 id="title">Code<span id="second-color">Space</span></h1></a>
         </div>
         <div class="buttons">
-            <button class="toolbar-btn" id="save-btn">Save</button>
             <button class="toolbar-btn" id="run-btn">Run</button>
             <button class="toolbar-btn" id="reset-btn">Reset</button>
+            <form method="POST" action={% url "logout" %}>
+                {% csrf_token %}
+                <button class="toolbar-btn" id="reset-btn" type="submit">LogOut</button>
+            <form>
         </div>
     </div>
-
     <!-- Main container for editor and output -->
     <div class="container">
         <!-- Left panel for code inputs -->
@@ -51,6 +53,49 @@
             <iframe id="live-output" title="Live Output"></iframe>
         </div>
     </div>
+{% else %}
+<div class="toolbar">
+    <div class="branding">
+       <a href={% url "index" %} > <h1 id="title">Code<span id="second-color">Space</span></h1></a>
+    </div>
+
+</div>
+<div class="main">
+    <section class="hero">
+        <div class="section-title">
+            <h1 id="hero-title" >Login Or SignUp With <span id="second-color">CodeSpace</span><br>
+            TO Access The Platform</h1><br>
+            <button class="cssbuttons-io" id="newBtn" ><a href={% url "login" %}>
+                <span
+                ><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0h24v24H0z" fill="none"></path>
+                    <path
+                    d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
+                    fill="currentColor">
+                    </path>
+                </svg>
+                LogIn</span>
+                </a>
+            </button>  
+            <button class="cssbuttons-io" id="newBtn" ><a href={% url "register" %}>
+                <span
+                ><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0h24v24H0z" fill="none"></path>
+                    <path
+                    d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
+                    fill="currentColor">
+                    </path>
+                </svg>
+                SignUp</span>
+                </a>
+            </button>
+        </div>
+        <div class="hero-img">
+            <img src=" {% static 'images/code-editor.png' %} " alt="" id="main-img" unselectable="on">
+        </div>
+    </section>
+</div>
+{% endif %}
     <script src=" {% static 'js/script.js' %} "></script>
 </body>
 </html>
