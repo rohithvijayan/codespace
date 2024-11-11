@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-tz-c*khatrfk$lt%)v==xzqvc*k3pustod0riu=0x1040u!!vo
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["https://codespace-9eu2.onrender.com",'127.0.0.1']
+ALLOWED_HOSTS = ["codespace-9eu2.onrender.com",'127.0.0.1']
 DATABASES = BASE_DIR = Path(__file__).resolve().parent.parent
 
 
